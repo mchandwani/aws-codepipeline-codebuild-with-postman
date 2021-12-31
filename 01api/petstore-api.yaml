@@ -7,7 +7,15 @@ Resources:
       StageName: prod
       DefinitionUri: petstore-swagger.json
 
-    
+TestLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Role: arn:aws:iam::182219041700:role/service-role/hello_python-role-1cb3qfzr
+      Handler: hello_world.hello_world
+      CodeUri: ./hello_world.py
+      Description: Hello World
+      FunctionName: hello-lambda-python
+
 Outputs:
 
     PetStoreAPI:
