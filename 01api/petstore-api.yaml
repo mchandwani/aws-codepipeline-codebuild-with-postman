@@ -7,7 +7,7 @@ Resources:
       StageName: prod
       DefinitionUri: petstore-swagger.json
 
-TestLambda:
+  TestLambda:
     Type: AWS::Serverless::Function
     Properties:
       Role: arn:aws:iam::182219041700:role/service-role/hello_python-role-1cb3qfzr
